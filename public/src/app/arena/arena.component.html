@@ -1,0 +1,20 @@
+<h3>These are the fighters in our arena!</h3>
+
+<a href='/fighters/new'>Add a fighter to the arena</a>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let fighter of fighters">
+      <td>{{fighter.name}}</td>
+      <td>{{fighter.type}}</td>
+      <td><button (click)="view(fighter._id)">Details</button> <button (click)="edit(fighter._id)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>

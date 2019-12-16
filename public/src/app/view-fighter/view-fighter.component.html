@@ -1,0 +1,10 @@
+<h3>Details about {{fighter.name}}</h3>
+
+<h3>Fighter type: <p>{{fighter.type}}</p></h3>
+<h3>Description: <p>{{fighter.desc}}</p></h3>
+<h3>Skills and Talents: 
+    <p *ngIf='fighter.skills.s1'>{{fighter.skills.s1}}</p>
+    <p *ngIf='fighter.skills.s2'>{{fighter.skills.s2}}</p>
+    <p *ngIf='fighter.skills.s3'>{{fighter.skills.s3}}</p>
+</h3>
+<button (click)='buy(fighter._id)'>Purchase this Fighter!</button>
